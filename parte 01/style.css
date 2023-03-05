@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background: rgb(40, 43, 46);
+    color: #fff;
+    min-height: 100vh;
+    
+}
+
+
+/*******************   TESTANDO O TOGGLE DO JAJASCRIPT JUNTO COM O CSS E HTML    ****************************/
+#toggle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #37a6ff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+/* ligando o toggle com o javascript */
+#toggle.active{
+    background: #a36177;
+}
+
+#toggle::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #ffffff;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 0#fff;
+}
+
+/* ligando o toggle com o javascript */
+#toggle.active::before{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 #fff;
+}
+
+#toggle::after{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #ffffff;
+    transform: translateY(-10px);
+}
+
+#toggle.active::after{
+    transform: translateY(0px) rotate(-45deg);
+}
+
+/***********************   FIM   ***********************************************************************/
+
+/*   QUADRADO  */
+#quadrado{
+    width: 200px;
+    height: 200px;
+    background: orange;
+}
+
+
+#quadrado.active{
+    background: #fff;
+}
+
+/*   Nav   */
+
+#lista{
+    list-style: none;
+    text-decoration: none;
+    font-size: 18pt;
+}
+
+#lista li{
+    transform: scaleY(0);
+}
+
+#lista.active li{
+    transform: scaleY(1);
+}
+
+
+button{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 14pt;
+    
+}
+
+#valor.active{
+    width:  200px;
+    height:  200px;
+    background-color: rgb(159, 134, 184);
+    
+}
+
+
